@@ -54,9 +54,16 @@ natij-portfolio/
 └── Text: White + Green-gray secondary
 ```
 
+## LIVE_URL
+```
+https://yahiazakihr-dev.github.io/natij-portfolio/
+```
+
 ## ORPHANS & PENDING
 ```
 [x] Logo file (assets/logo.png - 88KB)
+[x] GitHub Repository (yahiazakihr-dev/natij-portfolio)
+[x] GitHub Pages Deployment ✓
 [ ] Portfolio content (images/videos - placeholder active)
 [ ] Custom domain (optional)
 ```
@@ -73,5 +80,5 @@ M4: Content Integration ✓
   M4.4: Fallback logo handling ✓
   M4.5: Contact form validation ✓
   M4.6: Page fade-in transition ✓
-M5: Deploy to GitHub Pages (Pending User)
+M5: Deploy to GitHub Pages ✓
 ```
