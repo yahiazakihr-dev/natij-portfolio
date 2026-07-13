@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Natij - تصميم إعلانات، جرافيك، مونتاج فيديو احترافي بواسطة Yahia Mohammed">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a5c2e">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Natij | ناتج - تصميم ومونتاج">
+    <meta property="og:description" content="تصميم إعلانات، جرافيك، مونتاج فيديو احترافي">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231a5c2e'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='50' font-weight='bold' fill='%23f5b8c4' text-anchor='middle'%3Eن%3C/text%3E%3C/svg%3E">
+    
+    <title>Natij | ناتج - تصميم ومونتاج</title>
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/animations.css" as="style">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- GSAP 3.15.0 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">ناتج</div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#hero" class="nav-logo">
+                <img src="assets/logo.png" alt="Natij Logo" class="logo-img">
+                <span class="logo-text">ناتج</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link">الرئيسية</a></li>
+                <li><a href="#about" class="nav-link">عن ناتج</a></li>
+                <li><a href="#portfolio" class="nav-link">الأعمال</a></li>
+                <li><a href="#services" class="nav-link">الخدمات</a></li>
+                <li><a href="#contact" class="nav-link">تواصل</a></li>
+            </ul>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">مرحباً، أنا</p>
+                <h1 class="hero-name">
+                    <span class="name-highlight">Yahia</span> Mohammed
+                </h1>
+                <h2 class="hero-title">
+                    <span class="title-word">مصمم</span>
+                    <span class="title-divider">|</span>
+                    <span class="title-word">مونتير</span>
+                    <span class="title-divider">|</span>
+                    <span class="title-word">مبدع</span>
+                </h2>
+                <p class="hero-tagline">ناتج للتصميم الإبداعي</p>
+                
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn btn-primary">شاهد أعمالي</a>
+                    <a href="#contact" class="btn btn-secondary">تواصل معي</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="assets/logo.png" alt="Natij" class="hero-logo">
+                    <div class="hero-glow"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" id="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>اسحب للأسفل</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">من نحن</span>
+                <h2 class="section-title">عن <span class="text-accent">ناتج</span></h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        أنا <strong>Yahia Mohammed</strong>، مصمم جرافيك ومونتير فيديو محترف.
+                    </p>
+                    <p class="about-desc">
+                        بشتغل تحت براند <strong>ناتج</strong> في تصميم الإعلانات، الهوية البصرية، والمونتاج.
+                        هدفي إني أحوّل أفكارك لمحتوى بصري يلفت الانتباه ويوصل رسالتك بأسلوب احترافي.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">مشروع مكتمل</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="30">0</span>
+                            <span class="stat-label">عميل سعيد</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-label">سنوات خبرة</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-skills">
+                    <h3 class="skills-title">المهارات</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">🎨</div>
+                            <span class="skill-name">تصميم جرافيك</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🎬</div>
+                            <span class="skill-name">مونتاج فيديو</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">📱</div>
+                            <span class="skill-name">تصميم سوشيال ميديا</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">✨</div>
+                            <span class="skill-name">موشن جرافيك</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">الأعمال</span>
+                <h2 class="section-title">معرض <span class="text-accent">الأعمال</span></h2>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="design">تصميم</button>
+                <button class="filter-btn" data-filter="video">فيديو</button>
+                <button class="filter-btn" data-filter="social">سوشيال</button>
+            </div>
+            
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Portfolio items will be added dynamically -->
+                <div class="portfolio-empty">
+                    <p>قريباً... الأعمال قادمة قريباً</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">الخدمات</span>
+                <h2 class="section-title">ماذا <span class="text-accent">أقدم</span></h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon-circle"></div>
+                        <span>🎨</span>
+                    </div>
+                    <h3 class="service-title">تصميم جرافيك</h3>
+                    <p class="service-desc">لوجوهات، هوية بصرية، بوسترات، وكروت شخصية</p>
+                    <div class="service-price">يبدأ من 500 ج.م</div>
+                </div>
+                
+                <div class="service-card featured">
+                    <div class="service-badge">الأكثر طلباً</div>
+                    <div class="service-icon">
+                        <div class="icon-circle"></div>
+                        <span>🎬</span>
+                    </div>
+                    <h3 class="service-title">مونتاج فيديو</h3>
+                    <p class="service-desc">مونتاج احترافي، تأثيرات بصرية، ومؤثرات صوتية</p>
+                    <div class="service-price">يبدأ من 800 ج.م</div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon-circle"></div>
+                        <span>📱</span>
+                    </div>
+                    <h3 class="service-title">سوشيال ميديا</h3>
+                    <p class="service-desc">تصاميم انستجرام، تيك توك، وفيسبوك</p>
+                    <div class="service-price">يبدأ من 300 ج.م</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">تواصل</span>
+                <h2 class="section-title">تواصل <span class="text-accent">معنا</span></h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <h4>واتساب</h4>
+                            <a href="https://wa.me/201556152510" target="_blank" rel="noopener">
+                                +20 155 615 2510
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>البريد الإلكتروني</h4>
+                            <a href="mailto:natij.team.com@gmail.com">
+                                natij.team.com@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-cta">
+                        <a href="https://wa.me/201556152510?text=مرحباً، أريد الاستفسار عن خدماتكم" 
+                           class="btn btn-primary btn-large" 
+                           target="_blank" 
+                           rel="noopener">
+                            تواصل عبر واتساب
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="الاسم" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="رسالتك..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">إرسال</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Natij" class="footer-logo">
+                    <p class="footer-tagline">ناتج للتصميم الإبداعي</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="https://wa.me/201556152510" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <span class="social-icon">💬</span>
+                    </a>
+                    <a href="mailto:natij.team.com@gmail.com" aria-label="Email">
+                        <span class="social-icon">📧</span>
+                    </a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Natij. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/protect.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
