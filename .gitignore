@@ -22,3 +22,8 @@ temp/
 # Build files
 dist/
 build/
+
+# Unrelated projects
+perfume-store/
+node-install.msi
+wa_optimizer1.py
