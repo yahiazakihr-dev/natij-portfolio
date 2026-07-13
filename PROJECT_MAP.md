@@ -26,10 +26,11 @@ User → Landing Page
 natij-portfolio/
 ├── index.html          # Main HTML file
 ├── css/
-│   ├── style.css       # Core styles + variables
+│   ├── style.css       # Core styles + variables + chat styles
 │   └── animations.css  # GSAP + CSS animations
 ├── js/
 │   ├── main.js         # Core logic + animations
+│   ├── chat.js         # AI chatbot widget
 │   └── protect.js      # Anti-theft (watermark + disable)
 ├── assets/
 │   ├── logo.png        # Natij logo
@@ -64,7 +65,8 @@ https://yahiazakihr-dev.github.io/natij-portfolio/
 [x] Logo file (assets/logo.png - 88KB)
 [x] GitHub Repository (yahiazakihr-dev/natij-portfolio)
 [x] GitHub Pages Deployment ✓
-[ ] Portfolio content (images/videos - placeholder active)
+[x] AI Chatbot Widget ✓
+[ ] Portfolio content (images/videos - 1 item added)
 [ ] Custom domain (optional)
 ```
 
@@ -81,4 +83,9 @@ M4: Content Integration ✓
   M4.5: Contact form validation ✓
   M4.6: Page fade-in transition ✓
 M5: Deploy to GitHub Pages ✓
+M6: AI Chatbot Widget ✓
+  M6.1: Chat logic (services, prices, contact) ✓
+  M6.2: Chat widget HTML ✓
+  M6.3: Chat styles (green theme) ✓
+  M6.4: Typing animation ✓
 ```
