@@ -290,4 +290,47 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // Video Lightbox
+    var overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.id = 'lightbox-overlay';
+    overlay.innerHTML = '<div class="lightbox-content"><button class="lightbox-close" id="lightbox-close">✕</button><video id="lightbox-video" controls></video><div class="lightbox-title" id="lightbox-title"></div></div>';
+    document.body.appendChild(overlay);
+
+    var lightboxVideo = document.getElementById('lightbox-video');
+    var lightboxTitle = document.getElementById('lightbox-title');
+    var lightboxClose = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.portfolio-item video').forEach(function(video) {
+        video.style.cursor = 'pointer';
+        video.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var src = this.getAttribute('src');
+            var title = this.closest('.portfolio-item').querySelector('.portfolio-title').textContent;
+            lightboxVideo.src = src;
+            lightboxTitle.textContent = title;
+            overlay.classList.add('active');
+            lightboxVideo.play();
+        });
+    });
+
+    function closeLightbox() {
+        overlay.classList.remove('active');
+        lightboxVideo.pause();
+        lightboxVideo.src = '';
+    }
+
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) closeLightbox();
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
 });
