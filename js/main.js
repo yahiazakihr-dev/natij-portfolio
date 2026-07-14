@@ -307,6 +307,7 @@ document.addEventListener('DOMContentLoaded', function() {
         item.style.cursor = 'pointer';
         item.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             var video = this.querySelector('video');
             var img = this.querySelector('img');
             var title = this.querySelector('.portfolio-title').textContent;
@@ -318,6 +319,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (video) {
                 video.pause();
+                video.currentTime = 0;
                 lightboxVideo.src = video.querySelector('source') ? video.querySelector('source').src : video.src;
                 lightboxVideo.style.display = 'block';
                 lightboxTitle.textContent = title;

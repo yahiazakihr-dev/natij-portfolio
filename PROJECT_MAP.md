@@ -88,4 +88,9 @@ M6: AI Chatbot Widget ✓
   M6.2: Chat widget HTML ✓
   M6.3: Chat styles (green theme) ✓
   M6.4: Typing animation ✓
+M7: Portfolio Media Polish ✓
+  M7.1: Video/Image Lightbox ✓
+  M7.2: Pause original video on lightbox open ✓
+  M7.3: Remove native download button (controlsList="nodownload") ✓
+  M7.4: Remove blue focus outline on click ✓
 ```
