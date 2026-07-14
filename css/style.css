@@ -1302,11 +1302,13 @@ body {
     transform: scale(1);
 }
 
-.lightbox-content video {
+.lightbox-content video,
+.lightbox-content img {
     width: 100%;
     border-radius: var(--radius-lg);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
     border: 2px solid rgba(26, 92, 46, 0.3);
+    display: block;
 }
 
 .lightbox-close {

@@ -291,28 +291,43 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Video Lightbox
+    // Video & Image Lightbox
     var overlay = document.createElement('div');
     overlay.className = 'lightbox-overlay';
     overlay.id = 'lightbox-overlay';
-    overlay.innerHTML = '<div class="lightbox-content"><button class="lightbox-close" id="lightbox-close">✕</button><video id="lightbox-video" controls></video><div class="lightbox-title" id="lightbox-title"></div></div>';
+    overlay.innerHTML = '<div class="lightbox-content"><button class="lightbox-close" id="lightbox-close">✕</button><video id="lightbox-video" controls style="display:none"></video><img id="lightbox-img" style="display:none"><div class="lightbox-title" id="lightbox-title"></div></div>';
     document.body.appendChild(overlay);
 
     var lightboxVideo = document.getElementById('lightbox-video');
+    var lightboxImg = document.getElementById('lightbox-img');
     var lightboxTitle = document.getElementById('lightbox-title');
     var lightboxClose = document.getElementById('lightbox-close');
 
-    document.querySelectorAll('.portfolio-item video').forEach(function(video) {
-        video.style.cursor = 'pointer';
-        video.addEventListener('click', function(e) {
+    document.querySelectorAll('.portfolio-item').forEach(function(item) {
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', function(e) {
             e.preventDefault();
-            e.stopPropagation();
-            var src = this.getAttribute('src');
-            var title = this.closest('.portfolio-item').querySelector('.portfolio-title').textContent;
-            lightboxVideo.src = src;
-            lightboxTitle.textContent = title;
-            overlay.classList.add('active');
-            lightboxVideo.play();
+            var video = this.querySelector('video');
+            var img = this.querySelector('img');
+            var title = this.querySelector('.portfolio-title').textContent;
+
+            lightboxVideo.style.display = 'none';
+            lightboxImg.style.display = 'none';
+            lightboxVideo.src = '';
+            lightboxImg.src = '';
+
+            if (video) {
+                lightboxVideo.src = video.querySelector('source') ? video.querySelector('source').src : video.src;
+                lightboxVideo.style.display = 'block';
+                lightboxTitle.textContent = title;
+                overlay.classList.add('active');
+                lightboxVideo.play();
+            } else if (img) {
+                lightboxImg.src = img.src;
+                lightboxImg.style.display = 'block';
+                lightboxTitle.textContent = title;
+                overlay.classList.add('active');
+            }
         });
     });
 
@@ -320,6 +335,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.classList.remove('active');
         lightboxVideo.pause();
         lightboxVideo.src = '';
+        lightboxImg.src = '';
     }
 
     overlay.addEventListener('click', function(e) {
