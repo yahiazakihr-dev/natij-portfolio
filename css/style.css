@@ -792,6 +792,7 @@ body {
     font-size: 1rem;
     transition: var(--transition);
     font-family: inherit;
+    resize: none;
 }
 
 .form-group input:focus,
@@ -818,6 +819,10 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 25px;
+}
+
+.footer-brand {
+    text-align: center;
 }
 
 .footer-logo {
