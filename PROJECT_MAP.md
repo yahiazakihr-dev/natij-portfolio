@@ -93,4 +93,6 @@ M7: Portfolio Media Polish ✓
   M7.2: Pause original video on lightbox open ✓
   M7.3: Remove native download button (controlsList="nodownload") ✓
   M7.4: Remove blue focus outline on click ✓
+  M7.5: Desktop lightbox video cropping fix (max-height + object-fit: contain) ✓
+  M7.6: Mobile tap highlight suppression (-webkit-tap-highlight-color) ✓
 ```
