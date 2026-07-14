@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var overlay = document.createElement('div');
     overlay.className = 'lightbox-overlay';
     overlay.id = 'lightbox-overlay';
-    overlay.innerHTML = '<div class="lightbox-content"><button class="lightbox-close" id="lightbox-close">✕</button><video id="lightbox-video" controls style="display:none"></video><img id="lightbox-img" style="display:none"><div class="lightbox-title" id="lightbox-title"></div></div>';
+    overlay.innerHTML = '<div class="lightbox-content"><button class="lightbox-close" id="lightbox-close">✕</button><video id="lightbox-video" controls controlsList="nodownload" style="display:none"></video><img id="lightbox-img" style="display:none"><div class="lightbox-title" id="lightbox-title"></div></div>';
     document.body.appendChild(overlay);
 
     var lightboxVideo = document.getElementById('lightbox-video');
@@ -317,6 +317,7 @@ document.addEventListener('DOMContentLoaded', function() {
             lightboxImg.src = '';
 
             if (video) {
+                video.pause();
                 lightboxVideo.src = video.querySelector('source') ? video.querySelector('source').src : video.src;
                 lightboxVideo.style.display = 'block';
                 lightboxTitle.textContent = title;

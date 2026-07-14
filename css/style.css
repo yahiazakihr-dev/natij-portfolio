@@ -587,6 +587,7 @@ body {
     background: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: var(--transition);
+    outline: none;
 }
 
 .portfolio-item:hover {
@@ -1309,6 +1310,7 @@ body {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
     border: 2px solid rgba(26, 92, 46, 0.3);
     display: block;
+    outline: none;
 }
 
 .lightbox-close {
