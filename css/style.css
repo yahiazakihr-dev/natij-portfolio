@@ -887,6 +887,16 @@ body {
 }
 
 @media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .container {
+        padding: 0 15px;
+        overflow: hidden;
+    }
+    
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -908,17 +918,61 @@ body {
         display: flex;
     }
     
+    .hero {
+        overflow: hidden;
+    }
+    
+    .hero-bg {
+        overflow: hidden;
+    }
+    
+    .hero-particles {
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .hero-content {
+        padding: 0 10px;
+    }
+    
     .hero-name {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     
     .hero-title {
         flex-wrap: wrap;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+    
+    .hero-greeting {
+        font-size: 1rem;
+    }
+    
+    .hero-tagline {
+        font-size: 0.95rem;
+    }
+    
+    .hero-image-wrapper {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .hero-glow {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .section {
+        padding: 60px 0;
+        overflow: hidden;
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.85rem;
     }
     
     .about-stats {
@@ -927,6 +981,34 @@ body {
     
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card {
+        padding: 25px 20px;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-item {
+        padding: 15px;
+    }
+    
+    .footer {
+        padding: 30px 0;
+    }
+    
+    .footer-content {
+        gap: 15px;
     }
 }
 
